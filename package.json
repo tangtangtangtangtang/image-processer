@@ -10,32 +10,25 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:imageproducer.helloWorld"
+		"onCommand:imageproducer.compressFile"
 	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/tangtangtangtangtang/image-processer.git"
+	},
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "imageproducer.helloWorld",
-				"title": "Hello World"
-			},
-			{
-				"command": "imageproducer.getCurrentFilePath",
-				"title": "获取当前文件(夹)路径"
+				"command": "imageproducer.compressFile",
+				"title": "压缩当前文件"
 			}
 		],
 		"menus": {
-			"editor/context": [
-				{
-					"when": "editorFocus",
-					"command": "imageproducer.getCurrentFilePath",
-					"group": "navigation"
-				}
-			],
 			"explorer/context": [
 				{
 					"when": "!explorerResourceIsFolder",
-					"command": "imageproducer.getCurrentFilePath",
+					"command": "imageproducer.compressFile",
 					"group": "navigation"
 				}
 			]
